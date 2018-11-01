@@ -27,7 +27,7 @@ def extractPressure(readFile, writeFile):
                     and not indStr.isalpha() and isFloat(indStr)):
                     if "\n" in indStr:
                         indStr.replace("\n", "")
-                values.append(indStr)
+                    values.append(indStr)
 
     for val in values:
         towrite += val + "\n"
@@ -35,3 +35,5 @@ def extractPressure(readFile, writeFile):
     with open(writeFile, "w") as t:
         t.write(towrite)
     
+#first arg is data file name
+extractPressure("", "Exp H Values.txt")
